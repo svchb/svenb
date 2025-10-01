@@ -1,0 +1,89 @@
+/* Portfolio starter – Dark blue with warm gold accents
+   Accessible defaults, responsive layout, and print-friendly CV page.
+*/
+:root {
+  --bg: #0b1e2d;
+  --surface: #10273b;
+  --text: #e6edf3;
+  --muted: #9fb3c8;
+  --accent: #d4a017;
+  --accent-hover: #e3b21e;
+  --border: #1d3b56;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container { max-width: 960px; margin: 0 auto; padding: 1.25rem; }
+
+header.site-header {
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0));
+}
+.brand { display: flex; align-items: baseline; gap: .75rem; }
+.brand a { text-decoration: none; color: var(--text); font-weight: 700; font-size: 1.15rem; }
+.brand small { color: var(--muted); font-weight: 500; }
+
+nav a {
+  color: var(--muted);
+  margin-right: 1rem;
+  text-decoration: none;
+  padding: .35rem .55rem;
+  border-radius: .5rem;
+  transition: background .2s ease, color .2s ease;
+}
+nav a:hover, nav a:focus { color: var(--text); background: rgba(255,255,255,0.06); outline: none; }
+nav a.active { color: var(--text); background: rgba(212,160,23,0.18); }
+
+main { padding: 1.25rem 0 2rem; }
+.hero { padding: 1.5rem; border: 1px solid var(--border); border-radius: 1rem; background: var(--surface); }
+.hero h1 { margin: 0 0 .5rem 0; }
+.hero p { margin: 0.25rem 0 0 0; color: var(--muted); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.card h3 { margin: 0 0 .25rem 0; }
+.card p { margin: 0; color: var(--muted); }
+.card a.button {
+  display: inline-block; margin-top: .75rem;
+  background: var(--accent); color: #0a0f14;
+  border-radius: .6rem; padding: .5rem .7rem; font-weight: 600; text-decoration: none;
+}
+.card a.button:hover { background: var(--accent-hover); }
+
+footer.site-footer {
+  border-top: 1px solid var(--border); color: var(--muted);
+  padding: 1rem 0; margin-top: 2rem; font-size: .95rem;
+}
+
+code, pre { background: rgba(255,255,255,0.08); padding: .2rem .35rem; border-radius: .35rem; }
+
+a { color: var(--accent); }
+a:hover { color: var(--accent-hover); }
+
+/* CV page print tweaks */
+@media print {
+  body { background: #fff; color: #000; }
+  a { color: #000; }
+  header.site-header, footer.site-footer, nav { display: none; }
+  .container { max-width: none; }
+  .cv { border: none; }
+}

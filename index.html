@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Your Name – Portfolio</title>
+  <meta name="description" content="Portfolio and CV of Your Name. Selected examples and contact info.">
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:,">
+<meta name="color-scheme" content="dark">
+
+</head>
+<body>
+  <header class="site-header">
+  <div class="container">
+    <div class="brand">
+      <a href="index.html">Your Name</a>
+      <small>— Portfolio & CV</small>
+    </div>
+    <nav aria-label="Primary">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="examples-1.html" data-nav="ex1">Examples 1</a>
+      <a href="examples-2.html" data-nav="ex2">Examples 2</a>
+      <a href="cv.html" data-nav="cv">CV</a>
+    </nav>
+  </div>
+</header>
+<script>
+// Highlight active nav item
+(function() {
+  var path = location.pathname.split('/').pop() || 'index.html';
+  var map = { 'index.html': 'home', 'examples-1.html': 'ex1', 'examples-2.html': 'ex2', 'cv.html': 'cv' };
+  var key = map[path] || 'home';
+  var el = document.querySelector('a[data-nav="' + key + '"]');
+  if (el) el.classList.add('active');
+})();
+</script>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Hello, I'm Your Name</h1>
+      <p>Short intro line — what you do and what you're looking for.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Examples 1</h3>
+          <p>Showcase a few flagship projects.</p>
+          <a class="button" href="examples-1.html" aria-label="View Examples 1">View</a>
+        </div>
+        <div class="card">
+          <h3>Examples 2</h3>
+          <p>More samples or a different category.</p>
+          <a class="button" href="examples-2.html" aria-label="View Examples 2">View</a>
+        </div>
+        <div class="card">
+          <h3>CV</h3>
+          <p>Experience, skills, and education. Downloadable PDF.</p>
+          <a class="button" href="cv.html" aria-label="View CV">Open</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+  <div class="container">
+    <p>© <span id="y"></span> Your Name. Built with pure HTML/CSS. Hosted on GitHub Pages.</p>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</footer>
+
+</body>
+</html>

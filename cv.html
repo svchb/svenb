@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>CV – Your Name</title>
+  <meta name="description" content="Curriculum Vitae of Your Name.">
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:,">
+<meta name="color-scheme" content="dark">
+
+  <style>
+    .cv { background: var(--surface); border: 1px solid var(--border); border-radius: 1rem; padding: 1.25rem; }
+    .cv h2 { margin-top: 1.25rem; border-bottom: 1px solid var(--border); padding-bottom: .25rem; }
+    .cv .row { display: grid; grid-template-columns: 1fr auto; gap: .5rem; align-items: baseline; }
+    .cv .row time { color: var(--muted); font-variant-numeric: tabular-nums; }
+    .cv .tag { font-size: .9rem; background: rgba(212,160,23,0.18); border: 1px solid var(--border); padding: .2rem .45rem; border-radius: .5rem; margin-right: .4rem; }
+    .cv .btn { display:inline-block; background: var(--accent); color:#0a0f14; padding:.5rem .7rem; border-radius:.6rem; font-weight:600; text-decoration:none; }
+    .cv .btn:hover { background: var(--accent-hover); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+  <div class="container">
+    <div class="brand">
+      <a href="index.html">Your Name</a>
+      <small>— Portfolio & CV</small>
+    </div>
+    <nav aria-label="Primary">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="examples-1.html" data-nav="ex1">Examples 1</a>
+      <a href="examples-2.html" data-nav="ex2">Examples 2</a>
+      <a href="cv.html" data-nav="cv">CV</a>
+    </nav>
+  </div>
+</header>
+<script>
+// Highlight active nav item
+(function() {
+  var path = location.pathname.split('/').pop() || 'index.html';
+  var map = { 'index.html': 'home', 'examples-1.html': 'ex1', 'examples-2.html': 'ex2', 'cv.html': 'cv' };
+  var key = map[path] || 'home';
+  var el = document.querySelector('a[data-nav="' + key + '"]');
+  if (el) el.classList.add('active');
+})();
+</script>
+
+  <main class="container">
+    <div class="cv">
+      <h1>Curriculum Vitae</h1>
+      <p><strong>Your Name</strong> · City, Country · <a href="mailto:you@example.com">you@example.com</a> · <a href="https://github.com/USERNAME" target="_blank" rel="noopener">github.com/USERNAME</a></p>
+      <p><a class="btn" href="cv.pdf" download>Download PDF</a></p>
+
+      <h2>Experience</h2>
+      <div class="row">
+        <div><strong>Role Title</strong> — Company</div>
+        <time>2023–Present</time>
+      </div>
+      <ul>
+        <li>Impactful bullet point with a measurable result.</li>
+        <li>Another responsibility or achievement.</li>
+      </ul>
+
+      <div class="row">
+        <div><strong>Role Title</strong> — Company</div>
+        <time>2021–2023</time>
+      </div>
+      <ul>
+        <li>Highlight a tool/skill and outcome.</li>
+      </ul>
+
+      <h2>Education</h2>
+      <div class="row">
+        <div><strong>Degree</strong> — University</div>
+        <time>2017–2021</time>
+      </div>
+
+      <h2>Skills</h2>
+      <p>
+        <span class="tag">Python</span>
+        <span class="tag">MATLAB</span>
+        <span class="tag">Simulation</span>
+        <span class="tag">Git</span>
+      </p>
+    </div>
+  </main>
+  <footer class="site-footer">
+  <div class="container">
+    <p>© <span id="y"></span> Your Name. Built with pure HTML/CSS. Hosted on GitHub Pages.</p>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</footer>
+
+</body>
+</html>
