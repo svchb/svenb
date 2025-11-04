@@ -36,9 +36,12 @@
 </script>
 
   <main class="container">
-    <section class="hero">
-      <h1>Hello, I'm Your Name</h1>
+<section class="hero">
+  <div class="hero-grid">
+    <div class="intro">
+      <h1>Hello, I'm Dr. Ing. Sven Berger</h1>
       <p>Short intro line — what you do and what you're looking for.</p>
+
       <div class="grid">
         <div class="card">
           <h3>Examples 1</h3>
@@ -56,7 +59,22 @@
           <a class="button" href="cv.html" aria-label="View CV">Open</a>
         </div>
       </div>
-    </section>
+    </div>
+
+    <figure class="portrait">
+      <picture>
+        <source srcset="images/sven-berger.avif" type="image/avif">
+          <source srcset="images/sven-berger.webp" type="image/webp">
+          <img
+            src="images/sven-berger.jpg"
+            alt="Portrait of Dr. Ing. Sven Berger"
+            width="480" height="480"
+            loading="lazy" decoding="async"
+          >
+      </picture>
+    </figure>
+  </div>
+</section>
   </main>
   <footer class="site-footer">
   <div class="container">
