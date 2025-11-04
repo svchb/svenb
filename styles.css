@@ -30,6 +30,28 @@ header.site-header {
 .brand { display: flex; align-items: baseline; gap: .75rem; }
 .brand a { text-decoration: none; color: var(--text); font-weight: 700; font-size: 1.15rem; }
 .brand small { color: var(--muted); font-weight: 500; }
+/* Brand avatar next to name */
+.brand-link {
+  display: inline-flex;
+  align-items: center;      /* centers text and image vertically */
+  gap: .6rem;
+  line-height: 1;
+}
+
+.brand-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,.2);
+  box-shadow: 0 2px 8px rgba(0,0,0,.35);
+}
+
+/* Optional: shrink avatar on very small screens */
+@media (max-width: 420px) {
+  .brand-avatar { width: 32px; height: 32px; }
+}
+
 
 nav a {
   color: var(--muted);
