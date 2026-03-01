@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>CV – Your Name</title>
-  <meta name="description" content="Curriculum Vitae of Your Name.">
+  <title>CV – Dr. Sven Berger</title>
+  <meta name="description" content="Curriculum Vitae of Dr. Sven Berger.">
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="styles.css">
@@ -14,7 +14,7 @@
     .cv h2 { margin-top: 1.25rem; border-bottom: 1px solid var(--border); padding-bottom: .25rem; }
     .cv .row { display: grid; grid-template-columns: 1fr auto; gap: .5rem; align-items: baseline; }
     .cv .row time { color: var(--muted); font-variant-numeric: tabular-nums; }
-    .cv .tag { font-size: .9rem; background: rgba(212,160,23,0.18); border: 1px solid var(--border); padding: .2rem .45rem; border-radius: .5rem; margin-right: .4rem; }
+    .cv .tag { font-size: .9rem; background: rgba(212,160,23,0.18); border: 1px solid var(--border); padding: .2rem .45rem; border-radius: .5rem; margin-right: .4rem; margin-bottom: .4rem; display: inline-block;}
     .cv .btn { display:inline-block; background: var(--accent); color:#0a0f14; padding:.5rem .7rem; border-radius:.6rem; font-weight:600; text-decoration:none; }
     .cv .btn:hover { background: var(--accent-hover); }
   </style>
@@ -23,8 +23,18 @@
   <header class="site-header">
   <div class="container">
     <div class="brand">
-      <a href="index.html">Your Name</a>
-      <small>— Portfolio & CV</small>
+      <a href="index.html" class="brand-link">
+        <img
+          class="brand-avatar"
+          src="images/sven-berger-40.jpg"
+          srcset="
+            images/sven-berger-80.jpg 2x,
+            images/sven-berger-120.jpg 3x,
+            images/sven-berger-160.jpg 4x"
+          width="40" height="40"
+          alt="Portrait of Dr. Sven Berger">
+        <span>Dr. Sven Berger</span>
+      </a>
     </div>
     <nav aria-label="Primary">
       <a href="index.html" data-nav="home">Home</a>
@@ -48,45 +58,98 @@
   <main class="container">
     <div class="cv">
       <h1>Curriculum Vitae</h1>
-      <p><strong>Your Name</strong> · City, Country · <a href="mailto:you@example.com">you@example.com</a> · <a href="https://github.com/USERNAME" target="_blank" rel="noopener">github.com/USERNAME</a></p>
+      <p><strong>Dr. Sven Berger</strong> · Hamburg Area, Germany · <a href="mailto:berger.sven@gmail.com">berger.sven@gmail.com</a> · <a href="https://www.linkedin.com/in/dr-sven-berger-41261b5a" target="_blank" rel="noopener">LinkedIn Profile</a> </p>
       <p><a class="btn" href="cv.pdf" download>Download PDF</a></p>
 
       <h2>Experience</h2>
       <div class="row">
-        <div><strong>Role Title</strong> — Company</div>
-        <time>2023–Present</time>
+        <div><strong>Postdoctoral Scientist</strong> — Helmholtz-Zentrum Hereon </div>
+        <time>February 2021 – Present </time>
       </div>
       <ul>
-        <li>Impactful bullet point with a measurable result.</li>
-        <li>Another responsibility or achievement.</li>
+        <li>Modeling of materials and corrosion, fluid dynamics, and development of open-source solvers. </li>
+        <li>Focused on machine learning, software engineering, and research data management. </li>
+        <li>Principal Investigator (PI) for Jointlab HiRSE (2022–2034), NFDI4Ing CorWiz (2024), MetaSurf (2024–2026), and MATRIX (2026–2027). </li>
+        <li>Main Developer for the Trixi-Framework, TrixiParticles.jl, and Kadi. </li>
       </ul>
 
       <div class="row">
-        <div><strong>Role Title</strong> — Company</div>
-        <time>2021–2023</time>
+        <div><strong>Research Assistant</strong> — Institute of Aerodynamics </div>
+        <time>February 2015 – January 2021 </time>
       </div>
       <ul>
-        <li>Highlight a tool/skill and outcome.</li>
+        <li>Researched computational aeroacoustic methods, combustion engines, renewable fuels, turbulent mixing, and particles. </li>
+        <li>Performed software engineering including performance optimization, benchmarking, testing platform development, and code reviews. </li>
+        <li>Transitioned the development model to GIT with CI, restructured software architecture, and modernized the codebase to C++14. </li>
+        <li>Organized documentation efforts, software workshops, tooling, and release planning. </li>
       </ul>
+      
+      <div class="row">
+        <div><strong>Student Research Assistant</strong> — Institute of Aerodynamics </div>
+        <time>June 2012 – January 2015 </time>
+      </div>
+      <ul>
+        <li>Developed a discontinuous Galerkin-based CAA solver. </li>
+      </ul>
+
+      <div class="row">
+        <div><strong>Student Research Assistant</strong> — Institute of Polymer Processing </div>
+        <time>March 2012 – December 2012 </time>
+      </div>
+      <ul>
+        <li>Worked on FEM of composite materials and simulation of injection molding processes. </li>
+      </ul>
+
+      <div class="row">
+        <div><strong>Intern (Fluid Engineering)</strong> — DEUTZ AG </div>
+        <time>September 2011 – February 2012 </time>
+      </div>
+      <ul>
+        <li>Developed a GUI for OpenFoam for common simulations and a flash boiling model for OpenFoam. </li>
+      </ul>
+
+      <div class="row">
+        <div><strong>Community Service</strong> — Roman Catholic Church </div>
+        <time>August 2006 – August 2007 </time>
+      </div>
+
+      <div class="row">
+        <div><strong>Intern</strong> — Bayer Technology Services </div>
+        <time>December 2005 – January 2006 </time>
+      </div>
 
       <h2>Education</h2>
       <div class="row">
-        <div><strong>Degree</strong> — University</div>
-        <time>2017–2021</time>
+        <div><strong>Doctor of Philosophy (Ph.D.)</strong> — RWTH Aachen University </div>
+        <time>2015–2020 </time>
+      </div>
+      
+      <div class="row">
+        <div><strong>Master of Science (M.S.), Computational Engineering Science</strong> — RWTH Aachen University </div>
+        <time>2007–2014 </time>
       </div>
 
-      <h2>Skills</h2>
+      <div class="row">
+        <div><strong>Abitur (University Entrance Qualification), Vocational College for Mathematics and Computer Science</strong> — Lessing-Berufskolleg Düsseldorf </div>
+        <time>2003–2006 </time>
+      </div>
+
+      <h2>Skills & Languages</h2>
       <p>
-        <span class="tag">Python</span>
-        <span class="tag">MATLAB</span>
-        <span class="tag">Simulation</span>
-        <span class="tag">Git</span>
-      </p>
+        <span class="tag">3D Printing</span> <span class="tag">Sustainable Design</span> <span class="tag">Corrosion</span> <span class="tag">Fluid Dynamics</span> <span class="tag">Machine Learning</span> <span class="tag">Software Engineering</span> <span class="tag">C++14</span> <span class="tag">SAP</span> <span class="tag">SQL</span> <br>
+        <span class="tag">German (Native or Bilingual)</span> <span class="tag">English (Full Professional)</span> <span class="tag">French (Elementary)</span> </p>
+
+      <h2>Honors & Awards</h2>
+      <ul>
+        <li>Dean's List </li>
+        <li>Sun Java Stars Award </li>
+      </ul>
+      
     </div>
   </main>
   <footer class="site-footer">
   <div class="container">
-    <p>© <span id="y"></span> Your Name. Built with pure HTML/CSS. Hosted on GitHub Pages.</p>
+    <p>© <span id="y"></span> Dr. Sven Berger. Built with pure HTML/CSS. Hosted on GitHub Pages.</p>
   </div>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </footer>
