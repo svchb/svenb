@@ -2,8 +2,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Software – Sven Berger</title>
-  <meta name="description" content="Selected research software and open-source projects by Sven Berger.">
+  <title>Software – Dr.-Ing. Sven Berger</title>
+  <meta name="description" content="Selected research software and open-source projects by Dr.-Ing. Sven Berger.">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
@@ -86,8 +86,15 @@
   <header class="site-header">
     <div class="container">
       <div class="brand">
-        <a href="index.html">Sven Berger</a>
-        <small>— Portfolio &amp; CV</small>
+        <a href="index.html" class="brand-link">
+          <img
+            class="brand-avatar"
+            src="images/sven-berger-40.jpg"
+            srcset="images/sven-berger-80.jpg 2x, images/sven-berger-120.jpg 3x, images/sven-berger-160.jpg 4x"
+            width="40" height="40"
+            alt="Portrait of Dr.-Ing. Sven Berger">
+          <span>Dr.-Ing. Sven Berger</span>
+        </a>
       </div>
       <nav aria-label="Primary">
         <a href="index.html" data-nav="home">Home</a>
@@ -109,6 +116,7 @@
 
   <main class="container">
     <h1>Software</h1>
+    <p class="software-intro">Selected research software and open-source projects from my work in FAIR data, simulation, and scientific computing.</p>
 
     <div class="software-grid">
       <article class="card software-card">
@@ -182,7 +190,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="y"></span> Sven Berger. Built with pure HTML/CSS. Hosted on GitHub Pages.</p>
+      <p>© <span id="y"></span> Dr.-Ing. Sven Berger. Built with HTML and CSS. Hosted on GitHub Pages.</p>
     </div>
     <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
   </footer>

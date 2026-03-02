@@ -1,14 +1,14 @@
-# GitHub Pages Portfolio Starter
+# Sven Berger Portfolio
 
-A minimal, accessible portfolio with a **dark blue** base and **warm gold** accents.
+A small static portfolio site for **Dr.-Ing. Sven Berger** with:
+- `index.html` — home page
+- `software.html` — research software
+- `projects.html` — running and finished projects
+- `cv.html` / `cv.pdf` — CV page and downloadable PDF
+- `styles.css` — shared site theme
+- `images/` — portrait images used in the header
 
-## Files
-- `index.html` — Home
-- `software.html`, `projects.html` — Example pages
-- `cv.html` — CV page (links to `cv.pdf`)
-- `styles.css` — Theme styles
-
-## Usage
-1. Rename "Dr. Ing. Sven Berger" and contact links inside the HTML files.
-2. Replace `cv.pdf` with your real CV at the repo root (or update the link).
-3. Push to a repo named `USERNAME.github.io`, or enable **Settings → Pages** to publish from `main`.
+## Notes
+- The site uses a shared dark theme and a consistent header/footer across all pages.
+- Software and project visuals are embedded directly in the HTML files, so the site can be deployed as-is.
+- `projects.html` currently includes a placeholder badge for **RoboLink** until an official project page/logo is available.

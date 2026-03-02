@@ -2,8 +2,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>CV – Dr. Sven Berger</title>
-  <meta name="description" content="Curriculum Vitae of Dr. Sven Berger.">
+  <title>CV – Dr.-Ing. Sven Berger</title>
+  <meta name="description" content="Curriculum vitae of Dr.-Ing. Sven Berger.">
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="styles.css">
@@ -22,49 +22,45 @@
 </head>
 <body>
   <header class="site-header">
-  <div class="container">
-    <div class="brand">
-      <a href="index.html" class="brand-link">
-        <img
-          class="brand-avatar"
-          src="images/sven-berger-40.jpg"
-          srcset=",,"
-            images/sven-berger-80.jpg 2x
-            images/sven-berger-120.jpg 3x
-            images/sven-berger-160.jpg 4x
-          width="40" height="40"
-          alt="Portrait of Dr. Sven Berger">
-        <span>Dr. Sven Berger</span>
-      </a>
+    <div class="container">
+      <div class="brand">
+        <a href="index.html" class="brand-link">
+          <img
+            class="brand-avatar"
+            src="images/sven-berger-40.jpg"
+            srcset="images/sven-berger-80.jpg 2x, images/sven-berger-120.jpg 3x, images/sven-berger-160.jpg 4x"
+            width="40" height="40"
+            alt="Portrait of Dr.-Ing. Sven Berger">
+          <span>Dr.-Ing. Sven Berger</span>
+        </a>
+      </div>
+      <nav aria-label="Primary">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="software.html" data-nav="ex1">Software</a>
+        <a href="projects.html" data-nav="ex2">Projects</a>
+        <a href="cv.html" data-nav="cv">CV</a>
+      </nav>
     </div>
-    <nav aria-label="Primary">
-      <a href="index.html" data-nav="home">Home</a>
-      <a href="software.html" data-nav="ex1">Software</a>
-      <a href="projects.html" data-nav="ex2">Projects</a>
-      <a href="cv.html" data-nav="cv">CV</a>
-    </nav>
-  </div>
-</header>
-<script>
-// Highlight active nav item
-(function() {
-  var path = location.pathname.split('/').pop() || 'index.html';
-  var map = { 'index.html': 'home', 'software.html': 'ex1', 'projects.html': 'ex2', 'cv.html': 'cv' };
-  var key = map[path] || 'home';
-  var el = document.querySelector('a[data-nav="' + key + '"]');
-  if (el) el.classList.add('active');
-})();
-</script>
+  </header>
+  <script>
+  (function() {
+    var path = location.pathname.split('/').pop() || 'index.html';
+    var map = { 'index.html': 'home', 'software.html': 'ex1', 'projects.html': 'ex2', 'cv.html': 'cv' };
+    var key = map[path] || 'home';
+    var el = document.querySelector('a[data-nav="' + key + '"]');
+    if (el) el.classList.add('active');
+  })();
+  </script>
 
   <main class="container">
     
     <div class="cv">
       <h1>Curriculum Vitae</h1>
-      <p><strong>Dr. Sven Berger</strong> · Hamburg Area, Germany · <a href="mailto:berger.sven@gmail.com">berger.sven@gmail.com</a> · <a href="https://www.linkedin.com/in/dr-sven-berger-41261b5a" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://orcid.org/0000-0001-6083-7038" target="_blank" rel="noopener">ORCID</a> · <a href="https://scholar.google.com/citations?hl=en&user=sAC_wfEAAAAJ" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://github.com/svchb" target="_blank" rel="noopener">GitHub</a></p>
+      <p><strong>Dr.-Ing. Sven Berger</strong> · Hamburg Area, Germany · <a href="mailto:berger.sven@gmail.com">berger.sven@gmail.com</a> · <a href="https://www.linkedin.com/in/dr-sven-berger-41261b5a" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://orcid.org/0000-0001-6083-7038" target="_blank" rel="noopener">ORCID</a> · <a href="https://scholar.google.com/citations?hl=en&user=sAC_wfEAAAAJ" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://github.com/svchb" target="_blank" rel="noopener">GitHub</a></p>
       <p><a class="btn" href="cv.pdf" download>Download PDF</a></p>
 
       <h2>Profile</h2>
-      <p>Postdoctoral scientist at Helmholtz-Zentrum Hereon working at the intersection of materials modelling, corrosion, fluid dynamics, machine learning, research software engineering, and research data management. Active in open-source scientific software and digital research infrastructure, with public project roles in OpenModel, CorWiz, HiRSE_PS, MetaSurf, and MATRIX.</p>
+      <p>Postdoctoral scientist at Helmholtz-Zentrum Hereon in the Department of Interface Modelling, working on computational materials science, research software, FAIR data workflows, and simulation methods. Current public projects and software include MetaSurf, HiRSE, MATRIX, Kadi4Mat, Trixi.jl, and TrixiParticles.jl.</p>
 
       <h2>Experience</h2>
       <div class="row">
@@ -74,8 +70,8 @@
       <ul>
         <li>Research in interface and materials modelling with a focus on corrosion, fluid dynamics, and data-driven workflows.</li>
         <li>Works on machine learning, research software engineering, and research data management.</li>
-        <li>Public project roles include OpenModel, CorWiz, HiRSE_PS, MetaSurf (Primary Contact), and MATRIX (PI).</li>
-        <li>Contributes to open-source simulation and data tools, including TrixiParticles.jl and CorWiz.</li>
+        <li>Public project roles include OpenModel, CorWiz, HiRSE, HiRSE_PS, MetaSurf, and MATRIX.</li>
+        <li>Contributes to open-source simulation and data tools including Kadi4Mat, Trixi.jl, and TrixiParticles.jl.</li>
       </ul>
 
       <div class="row">
@@ -144,11 +140,12 @@
 
       <h2>Selected Projects & Software</h2>
       <ul>
-        <li><strong>MATRIX</strong> — PI at Hereon for the ScienceServe project on digital twins and high-performance simulation workflows.</li>
-        <li><strong>MetaSurf</strong> — Primary Contact for the HMC project on interoperable metadata and research-data workflows in surface science (2024–2026).</li>
-        <li><strong>CorWiz</strong> — Hereon project for a corrosion knowledge web service (2023–2024).</li>
-        <li><strong>OpenModel</strong> — Hereon contact for the H2020 project on integrated open-access materials modelling innovation.</li>
-        <li><strong>TrixiParticles.jl</strong> — Open-source Julia framework for particle-based multiphysics simulation; public author and principal developer role documented in the repository and JOSS paper.</li>
+        <li><strong>MATRIX</strong> — ScienceServe project at Hereon on digital twins for materials science based on the Trixi framework.</li>
+        <li><strong>MetaSurf</strong> — HMC project on FAIR surface-science data, metadata-driven workflows, and Kadi4Mat-based infrastructure.</li>
+        <li><strong>HiRSE / HiRSE_PS</strong> — Joint Lab and preparatory study for research software engineering within Helmholtz Information.</li>
+        <li><strong>CorWiz</strong> — Project for corrosion data access, model integration, and digital workflows.</li>
+        <li><strong>OpenModel</strong> — H2020 project on integrated open-access materials modelling workflows.</li>
+        <li><strong>Kadi4Mat, Trixi.jl, and TrixiParticles.jl</strong> — Research software contributions spanning FAIR data management and Julia-based simulation.</li>
       </ul>
 
       <h2>Selected Publications</h2>
@@ -188,11 +185,11 @@
 
   </main>
   <footer class="site-footer">
-  <div class="container">
-    <p>© <span id="y"></span> Dr. Sven Berger. Built with pure HTML/CSS. Hosted on GitHub Pages.</p>
-  </div>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-</footer>
+    <div class="container">
+      <p>© <span id="y"></span> Dr.-Ing. Sven Berger. Built with HTML and CSS. Hosted on GitHub Pages.</p>
+    </div>
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  </footer>
 
 </body>
 </html>
