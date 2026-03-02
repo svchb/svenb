@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -27,10 +28,10 @@
         <img
           class="brand-avatar"
           src="images/sven-berger-40.jpg"
-          srcset="
-            images/sven-berger-80.jpg 2x,
-            images/sven-berger-120.jpg 3x,
-            images/sven-berger-160.jpg 4x"
+          srcset=",,"
+            images/sven-berger-80.jpg 2x
+            images/sven-berger-120.jpg 3x
+            images/sven-berger-160.jpg 4x
           width="40" height="40"
           alt="Portrait of Dr. Sven Berger">
         <span>Dr. Sven Berger</span>
@@ -38,8 +39,8 @@
     </div>
     <nav aria-label="Primary">
       <a href="index.html" data-nav="home">Home</a>
-      <a href="examples-1.html" data-nav="ex1">Examples 1</a>
-      <a href="examples-2.html" data-nav="ex2">Examples 2</a>
+      <a href="software.html" data-nav="ex1">Software</a>
+      <a href="projects.html" data-nav="ex2">Projects</a>
       <a href="cv.html" data-nav="cv">CV</a>
     </nav>
   </div>
@@ -48,7 +49,7 @@
 // Highlight active nav item
 (function() {
   var path = location.pathname.split('/').pop() || 'index.html';
-  var map = { 'index.html': 'home', 'examples-1.html': 'ex1', 'examples-2.html': 'ex2', 'cv.html': 'cv' };
+  var map = { 'index.html': 'home', 'software.html': 'ex1', 'projects.html': 'ex2', 'cv.html': 'cv' };
   var key = map[path] || 'home';
   var el = document.querySelector('a[data-nav="' + key + '"]');
   if (el) el.classList.add('active');
@@ -56,96 +57,135 @@
 </script>
 
   <main class="container">
+    
     <div class="cv">
       <h1>Curriculum Vitae</h1>
-      <p><strong>Dr. Sven Berger</strong> · Hamburg Area, Germany · <a href="mailto:berger.sven@gmail.com">berger.sven@gmail.com</a> · <a href="https://www.linkedin.com/in/dr-sven-berger-41261b5a" target="_blank" rel="noopener">LinkedIn Profile</a> </p>
+      <p><strong>Dr. Sven Berger</strong> · Hamburg Area, Germany · <a href="mailto:berger.sven@gmail.com">berger.sven@gmail.com</a> · <a href="https://www.linkedin.com/in/dr-sven-berger-41261b5a" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://orcid.org/0000-0001-6083-7038" target="_blank" rel="noopener">ORCID</a> · <a href="https://scholar.google.com/citations?hl=en&user=sAC_wfEAAAAJ" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://github.com/svchb" target="_blank" rel="noopener">GitHub</a></p>
       <p><a class="btn" href="cv.pdf" download>Download PDF</a></p>
+
+      <h2>Profile</h2>
+      <p>Postdoctoral scientist at Helmholtz-Zentrum Hereon working at the intersection of materials modelling, corrosion, fluid dynamics, machine learning, research software engineering, and research data management. Active in open-source scientific software and digital research infrastructure, with public project roles in OpenModel, CorWiz, HiRSE_PS, MetaSurf, and MATRIX.</p>
 
       <h2>Experience</h2>
       <div class="row">
-        <div><strong>Postdoctoral Scientist</strong> — Helmholtz-Zentrum Hereon </div>
-        <time>February 2021 – Present </time>
+        <div><strong>Postdoctoral Scientist</strong> — Helmholtz-Zentrum Hereon, Institute of Surface Science, Department of Interface Modelling</div>
+        <time>February 2021 – Present</time>
       </div>
       <ul>
-        <li>Modeling of materials and corrosion, fluid dynamics, and development of open-source solvers. </li>
-        <li>Focused on machine learning, software engineering, and research data management. </li>
-        <li>Principal Investigator (PI) for Jointlab HiRSE (2022–2034), NFDI4Ing CorWiz (2024), MetaSurf (2024–2026), and MATRIX (2026–2027). </li>
-        <li>Main Developer for the Trixi-Framework, TrixiParticles.jl, and Kadi. </li>
+        <li>Research in interface and materials modelling with a focus on corrosion, fluid dynamics, and data-driven workflows.</li>
+        <li>Works on machine learning, research software engineering, and research data management.</li>
+        <li>Public project roles include OpenModel, CorWiz, HiRSE_PS, MetaSurf (Primary Contact), and MATRIX (PI).</li>
+        <li>Contributes to open-source simulation and data tools, including TrixiParticles.jl and CorWiz.</li>
       </ul>
 
       <div class="row">
-        <div><strong>Research Assistant</strong> — Institute of Aerodynamics </div>
-        <time>February 2015 – January 2021 </time>
+        <div><strong>Research Assistant</strong> — Institute of Aerodynamics, RWTH Aachen University</div>
+        <time>February 2015 – January 2021</time>
       </div>
       <ul>
-        <li>Researched computational aeroacoustic methods, combustion engines, renewable fuels, turbulent mixing, and particles. </li>
-        <li>Performed software engineering including performance optimization, benchmarking, testing platform development, and code reviews. </li>
-        <li>Transitioned the development model to GIT with CI, restructured software architecture, and modernized the codebase to C++14. </li>
-        <li>Organized documentation efforts, software workshops, tooling, and release planning. </li>
-      </ul>
-      
-      <div class="row">
-        <div><strong>Student Research Assistant</strong> — Institute of Aerodynamics </div>
-        <time>June 2012 – January 2015 </time>
-      </div>
-      <ul>
-        <li>Developed a discontinuous Galerkin-based CAA solver. </li>
+        <li>Researched computational aeroacoustics, combustion engines, renewable fuels, turbulent mixing, and particle-laden flows.</li>
+        <li>Performed software engineering, including performance optimization, benchmarking, testing infrastructure, and code review.</li>
+        <li>Helped modernize the code base and development workflow using Git, continuous integration, and a migration to modern C++.</li>
+        <li>Completed doctoral research on massively parallel large-eddy simulation for internal combustion engines.</li>
       </ul>
 
       <div class="row">
-        <div><strong>Student Research Assistant</strong> — Institute of Polymer Processing </div>
-        <time>March 2012 – December 2012 </time>
+        <div><strong>Student Research Assistant</strong> — Institute of Aerodynamics, RWTH Aachen University</div>
+        <time>June 2012 – January 2015</time>
       </div>
       <ul>
-        <li>Worked on FEM of composite materials and simulation of injection molding processes. </li>
+        <li>Developed a discontinuous Galerkin-based computational aeroacoustics solver.</li>
       </ul>
 
       <div class="row">
-        <div><strong>Intern (Fluid Engineering)</strong> — DEUTZ AG </div>
-        <time>September 2011 – February 2012 </time>
+        <div><strong>Student Research Assistant</strong> — Institute of Polymer Processing, RWTH Aachen University</div>
+        <time>March 2012 – December 2012</time>
       </div>
       <ul>
-        <li>Developed a GUI for OpenFoam for common simulations and a flash boiling model for OpenFoam. </li>
+        <li>Worked on finite-element modelling of composite materials and simulation of injection-moulding processes.</li>
       </ul>
 
       <div class="row">
-        <div><strong>Community Service</strong> — Roman Catholic Church </div>
-        <time>August 2006 – August 2007 </time>
+        <div><strong>Intern (Fluid Engineering)</strong> — DEUTZ AG</div>
+        <time>September 2011 – February 2012</time>
+      </div>
+      <ul>
+        <li>Developed an OpenFOAM GUI for common simulation tasks and implemented a flash-boiling model.</li>
+      </ul>
+
+      <div class="row">
+        <div><strong>Community Service</strong> — Roman Catholic Church</div>
+        <time>August 2006 – August 2007</time>
       </div>
 
       <div class="row">
-        <div><strong>Intern</strong> — Bayer Technology Services </div>
-        <time>December 2005 – January 2006 </time>
+        <div><strong>Intern</strong> — Bayer Technology Services</div>
+        <time>December 2005 – January 2006</time>
       </div>
 
       <h2>Education</h2>
       <div class="row">
-        <div><strong>Doctor of Philosophy (Ph.D.)</strong> — RWTH Aachen University </div>
-        <time>2015–2020 </time>
+        <div><strong>Doctor of Philosophy (PhD)</strong> — RWTH Aachen University</div>
+        <time>2021</time>
       </div>
-      
+      <ul>
+        <li>Thesis: <em>Massively parallel large-eddy simulation solver for internal combustion engines</em>.</li>
+      </ul>
+
       <div class="row">
-        <div><strong>Master of Science (M.S.), Computational Engineering Science</strong> — RWTH Aachen University </div>
-        <time>2007–2014 </time>
+        <div><strong>Master of Science (M.Sc.), Computational Engineering Science</strong> — RWTH Aachen University</div>
+        <time>2007 – 2014</time>
       </div>
 
       <div class="row">
-        <div><strong>Abitur (University Entrance Qualification), Vocational College for Mathematics and Computer Science</strong> — Lessing-Berufskolleg Düsseldorf </div>
-        <time>2003–2006 </time>
+        <div><strong>Abitur (University Entrance Qualification), Vocational College for Mathematics and Computer Science</strong> — Lessing-Berufskolleg Düsseldorf</div>
+        <time>2003 – 2006</time>
       </div>
+
+      <h2>Selected Projects & Software</h2>
+      <ul>
+        <li><strong>MATRIX</strong> — PI at Hereon for the ScienceServe project on digital twins and high-performance simulation workflows.</li>
+        <li><strong>MetaSurf</strong> — Primary Contact for the HMC project on interoperable metadata and research-data workflows in surface science (2024–2026).</li>
+        <li><strong>CorWiz</strong> — Hereon project for a corrosion knowledge web service (2023–2024).</li>
+        <li><strong>OpenModel</strong> — Hereon contact for the H2020 project on integrated open-access materials modelling innovation.</li>
+        <li><strong>TrixiParticles.jl</strong> — Open-source Julia framework for particle-based multiphysics simulation; public author and principal developer role documented in the repository and JOSS paper.</li>
+      </ul>
+
+      <h2>Selected Publications</h2>
+      <ul>
+        <li>Neher, N. S.; Faulhaber, E.; Berger, S.; Gassner, G. J.; Schlottke-Lakemper, M. (2025): <em>TrixiParticles.jl: Particle-based multiphysics simulation in Julia</em>. <em>Journal of Open Source Software</em>, 10(105), 7044. DOI: 10.21105/joss.07044</li>
+        <li>Sohn, S.; Shi, S.; Markmann, J.; Berger, S.; Weissmüller, J. (2025): <em>Compressive behavior and connecting topology of monolithic nanoporous niobium</em>. <em>Materials Research Letters</em>, 13(1), 76–85. DOI: 10.1080/21663831.2024.2421867</li>
+        <li>Wiese, B.; Berger, S.; Bohlen, J.; Nienaber, M.; Höche, D. (2023): <em>Property design of extruded magnesium-gadolinium alloys through machine learning</em>. <em>Materials Today Communications</em>, 36, 106566. DOI: 10.1016/j.mtcomm.2023.106566</li>
+        <li>Berger, S. C.; Wegmann, T.; Meinke, M.; Schröder, W. (2020): <em>Large-Eddy Simulation Study of Biofuel Injection in an Optical Direct Injection Engine</em>. <em>SAE Technical Paper</em> 2020-01-2121. DOI: 10.4271/2020-01-2121</li>
+        <li>Schlottke-Lakemper, M. A.; Yu, H.; Berger, S. C.; Meinke, M.; Schröder, W. (2017): <em>A fully coupled hybrid computational aeroacoustics method on hierarchical Cartesian meshes</em>. <em>Computers &amp; Fluids</em>, 144, 137–153. DOI: 10.1016/j.compfluid.2016.12.001</li>
+      </ul>
 
       <h2>Skills & Languages</h2>
       <p>
-        <span class="tag">3D Printing</span> <span class="tag">Sustainable Design</span> <span class="tag">Corrosion</span> <span class="tag">Fluid Dynamics</span> <span class="tag">Machine Learning</span> <span class="tag">Software Engineering</span> <span class="tag">C++14</span> <span class="tag">SAP</span> <span class="tag">SQL</span> <br>
-        <span class="tag">German (Native or Bilingual)</span> <span class="tag">English (Full Professional)</span> <span class="tag">French (Elementary)</span> </p>
+        <span class="tag">Materials Modelling</span>
+        <span class="tag">Corrosion</span>
+        <span class="tag">Interface Modelling</span>
+        <span class="tag">Fluid Dynamics</span>
+        <span class="tag">Computational Aeroacoustics</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Research Software Engineering</span>
+        <span class="tag">Research Data Management</span>
+        <span class="tag">Julia</span>
+        <span class="tag">C++</span>
+        <span class="tag">Python</span>
+        <span class="tag">Git / CI</span><br>
+        <span class="tag">German (Native or Bilingual)</span>
+        <span class="tag">English (Full Professional)</span>
+        <span class="tag">French (Elementary)</span>
+      </p>
 
       <h2>Honors & Awards</h2>
       <ul>
-        <li>Dean's List </li>
-        <li>Sun Java Stars Award </li>
+        <li>RWTH Aachen Dean's List (2014)</li>
+        <li>Sun Microsystems Java Star (2005)</li>
       </ul>
-      
     </div>
+
   </main>
   <footer class="site-footer">
   <div class="container">

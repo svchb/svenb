@@ -1,85 +1,311 @@
+
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Dr. Ing. Sven Berger</title>
-  <meta name="description" content="Portfolio and CV of Dr. Ing. Sven Berger. Selected examples and contact info.">
+  <title>Dr.-Ing. Sven Berger</title>
+  <meta name="description" content="Portfolio and CV of Dr.-Ing. Sven Berger, featuring research software, scientific projects, and professional background.">
   <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles.css">
-<link rel="icon" href="data:,">
-<meta name="color-scheme" content="dark">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:,">
+  <meta name="color-scheme" content="dark">
+  <style>
+    .hero {
+      padding: 2rem 0 1rem;
+    }
 
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.75fr) minmax(280px, 1fr);
+      gap: 1.2rem;
+      align-items: stretch;
+    }
+
+    .hero-panel,
+    .info-panel,
+    .section-card {
+      border-radius: 22px;
+      padding: 1.4rem;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+    }
+
+    .eyebrow {
+      margin: 0 0 0.7rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      opacity: 0.72;
+    }
+
+    .hero h1 {
+      margin: 0 0 0.9rem;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.05;
+    }
+
+    .lead {
+      margin: 0;
+      max-width: 58ch;
+      font-size: 1.04rem;
+      line-height: 1.65;
+      opacity: 0.92;
+    }
+
+    .hero-actions,
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1.2rem;
+    }
+
+    .button.button-secondary {
+      background: transparent;
+      border: 1px solid currentColor;
+    }
+
+    .hero-highlights {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.85rem;
+      margin-top: 1.2rem;
+    }
+
+    .hero-highlights .mini-card {
+      padding: 0.9rem 1rem;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .mini-card strong,
+    .info-item strong {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-size: 0.98rem;
+    }
+
+    .mini-card p,
+    .info-item p,
+    .section-card p,
+    .home-card p {
+      margin: 0;
+      line-height: 1.55;
+      opacity: 0.88;
+    }
+
+    .info-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+
+    .info-panel h2,
+    .section-card h2 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    .info-list {
+      display: grid;
+      gap: 0.85rem;
+      margin-top: 0.9rem;
+    }
+
+    .info-item {
+      padding: 0.9rem 1rem;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .section-block {
+      padding: 1rem 0 0.6rem;
+    }
+
+    .section-heading {
+      margin: 0 0 0.8rem;
+      font-size: 1.55rem;
+    }
+
+    .home-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    .home-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      height: 100%;
+    }
+
+    .home-card h3 {
+      margin: 0;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 0.2rem;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.3rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.92rem;
+      opacity: 0.92;
+    }
+
+    .section-card {
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-panel,
+      .info-panel,
+      .section-card {
+        padding: 1.1rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
-  <div class="container">
-  <div class="brand">
-    <a href="index.html" class="brand-link">
-      <img
-        class="brand-avatar"
-        src="images/sven-berger-40.jpg"
-        srcset="
-          images/sven-berger-80.jpg 2x,
-          images/sven-berger-120.jpg 3x,
-          images/sven-berger-160.jpg 4x"
-        width="40" height="40"
-        alt="Portrait of Dr. Ing. Sven Berger">
-      <span>Dr. Ing Sven Berger</span>
-    </a>
-  </div>
-    <nav aria-label="Primary">
-      <a href="index.html" data-nav="home">Home</a>
-      <a href="examples-1.html" data-nav="ex1">Examples 1</a>
-      <a href="examples-2.html" data-nav="ex2">Examples 2</a>
-      <a href="cv.html" data-nav="cv">CV</a>
-    </nav>
-  </div>
-</header>
-<script>
-// Highlight active nav item
-(function() {
-  var path = location.pathname.split('/').pop() || 'index.html';
-  var map = { 'index.html': 'home', 'examples-1.html': 'ex1', 'examples-2.html': 'ex2', 'cv.html': 'cv' };
-  var key = map[path] || 'home';
-  var el = document.querySelector('a[data-nav="' + key + '"]');
-  if (el) el.classList.add('active');
-})();
-</script>
+    <div class="container">
+      <div class="brand">
+        <a href="index.html" class="brand-link">
+          <img
+            class="brand-avatar"
+            src="images/sven-berger-40.jpg"
+            srcset=",,"
+              images/sven-berger-80.jpg 2x
+              images/sven-berger-120.jpg 3x
+              images/sven-berger-160.jpg 4x
+            width="40" height="40"
+            alt="Portrait of Dr.-Ing. Sven Berger">
+          <span>Dr.-Ing. Sven Berger</span>
+        </a>
+      </div>
+      <nav aria-label="Primary">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="software.html" data-nav="ex1">Software</a>
+        <a href="projects.html" data-nav="ex2">Projects</a>
+        <a href="cv.html" data-nav="cv">CV</a>
+      </nav>
+    </div>
+  </header>
+  <script>
+  (function() {
+    var path = location.pathname.split('/').pop() || 'index.html';
+    var map = { 'index.html': 'home', 'software.html': 'ex1', 'projects.html': 'ex2', 'cv.html': 'cv' };
+    var key = map[path] || 'home';
+    var el = document.querySelector('a[data-nav="' + key + '"]');
+    if (el) el.classList.add('active');
+  })();
+  </script>
 
   <main class="container">
-<section class="hero">
-  <div class="hero-grid">
-    <div class="intro">
-      <h1>Hello, I'm Dr. Ing. Sven Berger</h1>
-      <p>Short intro line — what you do and what you're looking for.</p>
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-panel">
+          <p class="eyebrow">Research software · Scientific computing · FAIR data</p>
+          <h1>Computational materials science and sustainable research software.</h1>
+          <p class="lead">
+            I work at Helmholtz-Zentrum Hereon on scientific software, digital research workflows,
+            and computational methods for materials research.
+          </p>
+        </div>
 
-      <div class="grid">
-        <div class="card">
-          <h3>Examples 1</h3>
-          <p>Showcase a few flagship projects.</p>
-          <a class="button" href="examples-1.html" aria-label="View Examples 1">View</a>
-        </div>
-        <div class="card">
-          <h3>Examples 2</h3>
-          <p>More samples or a different category.</p>
-          <a class="button" href="examples-2.html" aria-label="View Examples 2">View</a>
-        </div>
-        <div class="card">
-          <h3>CV</h3>
-          <p>Experience, skills, and education. Downloadable PDF.</p>
-          <a class="button" href="cv.html" aria-label="View CV">Open</a>
-        </div>
+        <aside class="info-panel" aria-label="Current focus areas">
+          <div>
+            <h2>Current focus</h2>
+            <div class="info-list">
+              <div class="info-item">
+                <strong>FAIR data</strong>
+                <p>Research data infrastructure and metadata workflows.</p>
+              </div>
+              <div class="info-item">
+                <strong>Scientific software</strong>
+                <p>Open-source tools for data and simulation.</p>
+              </div>
+              <div class="info-item">
+                <strong>Collaboration</strong>
+                <p>Projects such as MetaSurf, HiRSE, and OpenModel.</p>
+              </div>
+            </div>
+          </div>
+          <div class="tag-row" aria-label="Topics">
+            <span class="tag">FAIR data</span>
+            <span class="tag">Metadata</span>
+            <span class="tag">Research data</span>
+            <span class="tag">Julia</span>
+            <span class="tag">Scientific computing</span>
+            <span class="tag">Multiphysics</span>
+            <span class="tag">Particle methods</span>
+            <span class="tag">Materials modelling</span>
+            <span class="tag">RSE</span>
+            <span class="tag">Open source</span>
+          </div>
+        </aside>
       </div>
-    </div>
-  </div>
-</section>
-  </main>
-  <footer class="site-footer">
-  <div class="container">
-    <p>© <span id="y"></span> Dr. Ing. Sven Berger. Built with pure HTML/CSS. Hosted on GitHub Pages.</p>
-  </div>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-</footer>
+    </section>
 
+    <section class="section-block" aria-labelledby="site-sections">
+      <h2 class="section-heading" id="site-sections">Overview</h2>
+
+      <div class="home-grid">
+        <article class="card home-card">
+          <h3>Software</h3>
+          <p>Research software and open-source tools I work on.</p>
+          <div class="button-row">
+            <a class="button" href="software.html" aria-label="View software page">View Software</a>
+          </div>
+        </article>
+
+        <article class="card home-card">
+          <h3>Projects</h3>
+          <p>Selected collaborations, grouped into running and finished work.</p>
+          <div class="button-row">
+            <a class="button" href="projects.html" aria-label="View projects page">View Projects</a>
+          </div>
+        </article>
+
+        <article class="card home-card">
+          <h3>CV</h3>
+          <p>A compact overview of my background and publications.</p>
+          <div class="button-row">
+            <a class="button" href="cv.html" aria-label="Open CV page">Open CV</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="y"></span> Dr.-Ing. Sven Berger. Built with pure HTML/CSS. Hosted on GitHub Pages.</p>
+    </div>
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  </footer>
 </body>
 </html>
